@@ -19,7 +19,14 @@ public class TransactionService {
         transaction.setId(UUID.randomUUID().toString());
         transaction.setType(request.getType());
         transaction.setAmount(request.getAmount());
-        transaction.setCurrency(request.getCurrency());
+        if(request.getCurrency()!=null){
+            try {
+                String currencyString = request.getCurrency();
+                transaction.setCurrency(Transaction.CurrencyType.valueOf(currencyString));
+            } catch(IllegalArgumentException e){
+                throw new IllegalStateException("Invalid currency: " + request.getCurrency());
+            }
+        }
         transaction.setTimeStamp(request.getTimestamp());
         transactionRepository.save(transaction);
     }

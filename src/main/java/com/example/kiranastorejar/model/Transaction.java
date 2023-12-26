@@ -2,6 +2,7 @@ package com.example.kiranastorejar.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.format.number.money.CurrencyUnitFormatter;
 
 import java.util.Date;
 
@@ -11,8 +12,13 @@ public class Transaction {
     private String id;
     private String type;
     private double amount;
-    private String currency;
+    private CurrencyType currency;
     private Date timestamp;
+
+    public enum CurrencyType {
+        INR,
+        USD
+    }
 
     
 
@@ -44,7 +50,7 @@ public class Transaction {
 
    
 
-    public void setCurrency(String currency) {
+    public void setCurrency(CurrencyType currency) {
         this.currency = currency;
     }
 
