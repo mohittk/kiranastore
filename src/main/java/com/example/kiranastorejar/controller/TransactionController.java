@@ -25,4 +25,9 @@ public class TransactionController {
     public List<Transaction> listTransactions() {
         return transactionService.listTransactions();
     }
+
+    @GetMapping("/grouped-list")
+    public Map<String, List<Map<String, Object>>> groupTransactionsByDate() {
+        return transactionService.groupTransactionsByDate();
+    }
 }
