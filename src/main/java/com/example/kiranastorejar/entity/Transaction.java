@@ -1,8 +1,7 @@
-package com.example.kiranastorejar.model;
+package com.example.kiranastorejar.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.format.number.money.CurrencyUnitFormatter;
 
 import java.util.Date;
 

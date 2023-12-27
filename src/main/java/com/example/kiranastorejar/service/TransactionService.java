@@ -1,6 +1,7 @@
 package com.example.kiranastorejar.service;
 
 import com.example.kiranastorejar.repository.*;
+import com.example.kiranastorejar.entity.*;
 import com.example.kiranastorejar.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

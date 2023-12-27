@@ -2,6 +2,7 @@ package com.example.kiranastorejar.controller;
 
 
 import com.example.kiranastorejar.model.*;
+import com.example.kiranastorejar.entity.*;
 import com.example.kiranastorejar.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
